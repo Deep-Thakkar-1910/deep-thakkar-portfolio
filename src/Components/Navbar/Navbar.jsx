@@ -58,8 +58,8 @@ const Navbar = ({ setIsNavbarOpen, isNavbarOpen }) => {
           })}
         </ul>
         {/* hire me button */}
-        <button className={styles.hireMe} onClick={handleDownload}>
-          Hire Me
+        <button className={styles.resume} onClick={handleDownload}>
+          Resume
         </button>
       </div>
       <div

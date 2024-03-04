@@ -53,9 +53,9 @@ const MobileNavBar = ({ isNavbarOpen }) => {
             );
           })}
         </ul>
-        {/* hire me button */}
-        <button className={styles.hireMe} onClick={handleDownload}>
-          Hire Me
+        {/* Download resume button */}
+        <button className={styles.resume} onClick={handleDownload}>
+          Resume
         </button>
       </div>
     </>
