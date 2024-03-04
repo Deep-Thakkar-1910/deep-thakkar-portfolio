@@ -1,8 +1,9 @@
 import PageLayout from "@/Components/PageLayout/PageLayout";
-import styles from "@/styles/AboutMe.module.scss";
 import Image from "next/image";
-import { motion as m } from "framer-motion";
+import { StylesContext } from "@/StyleContext/StyleProvider";
+import { useContext } from "react";
 const Aboutme = () => {
+  const { aboutMeStyles: styles } = useContext(StylesContext);
   return (
     <PageLayout>
       <main className={styles.aboutMeMain}>

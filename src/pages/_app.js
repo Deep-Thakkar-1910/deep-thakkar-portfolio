@@ -2,6 +2,7 @@ import "@/styles/globals.scss";
 import { Inter } from "next/font/google";
 import { useRouter } from "next/router";
 import { AnimatePresence, motion as m } from "framer-motion";
+import StyleProvider from "@/StyleContext/StyleProvider";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function App({ Component, pageProps }) {
@@ -13,7 +14,10 @@ export default function App({ Component, pageProps }) {
     <AnimatePresence mode="wait">
       <m.div key={location.pathname} className={inter.className}>
         {/* Pages */}
-        <Component {...pageProps} />
+        {/* StyleProvider is a HOC to let the pages access the styles context */}
+        <StyleProvider>
+          <Component {...pageProps} />
+        </StyleProvider>
         {/* entry black bg */}
         <m.div
           className="slideIn"

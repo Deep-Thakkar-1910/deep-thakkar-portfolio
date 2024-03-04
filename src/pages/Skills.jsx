@@ -1,11 +1,12 @@
 import PageLayout from "@/Components/PageLayout/PageLayout";
 import SkillCard from "@/Components/SkillCard/SkillCard";
 import SkillInfo from "@/Components/SkillCard/SkillInfo";
-import styles from "@/styles/Skills.module.scss";
 import { SKILLS } from "@/utils/SKILLS";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { AnimatePresence, motion as m } from "framer-motion";
+import { StylesContext } from "@/StyleContext/StyleProvider";
 const Skills = () => {
+  const { skillsStyles: styles } = useContext(StylesContext);
   // importing skills from utils
   const ALLSKILLS = SKILLS;
   // state for selecting which genre's skill to display

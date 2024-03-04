@@ -1,8 +1,9 @@
 import ContactForm from "@/Components/ContactForm/ContactForm";
 import PageLayout from "@/Components/PageLayout/PageLayout";
-import styles from "@/styles/Contact.module.scss";
-
+import { StylesContext } from "@/StyleContext/StyleProvider";
+import { useContext } from "react";
 const Contact = () => {
+  const { contactStyles: styles } = useContext(StylesContext);
   return (
     <PageLayout>
       {/* main div */}

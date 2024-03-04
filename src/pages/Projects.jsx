@@ -1,8 +1,10 @@
 import PageLayout from "@/Components/PageLayout/PageLayout";
 import ProjectCard from "@/Components/ProjectCard/ProjectCard";
-import styles from "@/styles/Projects.module.scss";
 import { ProjectList } from "@/utils/Projects";
+import { StylesContext } from "@/StyleContext/StyleProvider";
+import { useContext } from "react";
 const Projects = () => {
+  const { projectsStyles: styles } = useContext(StylesContext);
   return (
     <PageLayout>
       {/* main div */}

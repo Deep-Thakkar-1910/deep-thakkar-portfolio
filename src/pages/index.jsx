@@ -1,4 +1,3 @@
-import styles from "@/styles/Home.module.scss";
 import { Typewriter } from "react-simple-typewriter";
 import { FiGithub } from "react-icons/fi";
 import { FaLinkedinIn } from "react-icons/fa6";
@@ -6,8 +5,11 @@ import { BsTwitterX } from "react-icons/bs";
 import { FaInstagram } from "react-icons/fa6";
 import { useRouter } from "next/router";
 import PageLayout from "@/Components/PageLayout/PageLayout";
+import { useContext } from "react";
+import { StylesContext } from "@/StyleContext/StyleProvider";
 function Home() {
   const router = useRouter();
+  const { homeStyles: styles } = useContext(StylesContext);
   return (
     <PageLayout>
       <main className={styles.homeMain}>
